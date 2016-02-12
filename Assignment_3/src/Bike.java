@@ -19,11 +19,11 @@ public Bike(String color, int size, int price){
 			this.color = "EJ VALBAR FÄRG";
 		}
 	}
-    
+    /** The only avaiable sizes is the variables declared in Constants tab*/
 	if (size >= Constants.MIN_SIZE && size <= Constants.MAX_SIZE) {
 		this.size = size;
 	}
-
+	/** The only avaiable prices is the variables declared in Constants tab*/
 	if (price >= Constants.MIN_PRICE && price <= Constants.MAX_PRICE) {
 		this.price = price;
 	}
