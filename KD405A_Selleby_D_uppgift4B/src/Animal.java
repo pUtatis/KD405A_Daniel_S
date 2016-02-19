@@ -1,7 +1,7 @@
 public abstract class Animal {
 	
 	protected String latinName;
-	protected String friendlyName;
+    protected String friendlyName;
 
 	//Constructor
 	/**Creates an Animal with String-variable latinName*/
