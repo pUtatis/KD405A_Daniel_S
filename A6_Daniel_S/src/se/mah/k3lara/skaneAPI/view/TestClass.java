@@ -14,11 +14,12 @@ import se.mah.k3lara.skaneAPI.xmlparser.Parser;
 public class TestClass {
 
 	public static void main(String[] args) {
+		   // deklarerar en sträng som hämtar Constants med info om sationerna.
 		String searchURL = Constants.getURL("80000","81216",20); //Malmö C = 80000,  Lund C, 81216 Malmö Gatorg 80100, Hässleholm C 93070
 		System.out.println(searchURL);
 		System.out.println("// Results when searching:");
 		
-		Journeys journeys = Parser.getJourneys(searchURL);
+		Journeys journeys = Parser.getJourneys(searchURL); // Hämtar metoderna för att skriva ut reseinfo.
 		for (Journey journey : journeys.getJourneys()) {
 			System.out.print(journey.getStartStation()+" - ");
 			System.out.print(journey.getEndStation());
@@ -27,8 +28,8 @@ public class TestClass {
 		} 
 		
 	   System.out.println("// Stations when searching for stations containing \"Malm\"");
-		ArrayList<Station> searchStations = new ArrayList<Station>(); 
-		searchStations.addAll(Parser.getStationsFromURL("Malm"));
+		ArrayList<Station> searchStations = new ArrayList<Station>(); // skapar en arraylista med stationer. 
+		searchStations.addAll(Parser.getStationsFromURL("Malm"));     // sätter igång arraylistan och söker.
 		for (Station s: searchStations){
 			System.out.println(s.getStationName() +" number:" +s.getStationNbr());
 		}

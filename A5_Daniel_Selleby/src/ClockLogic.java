@@ -1,3 +1,4 @@
+
 /**Importerar tid- och datumgrejer*/
 
 import java.text.DecimalFormat;
@@ -58,9 +59,4 @@ public class ClockLogic {
         	}
         }
      }
-
-           
-            
-        
-
 
